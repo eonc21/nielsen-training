@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import MainRouter from './context/user-with-router/MainRouter';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
