@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Main from './context/username/Main';
-import MainRouter from './context/user-with-router/MainRouter';
+import MainRouter from './context/user-with-router-memo/MainRouter';
 
 function App() {
   return (

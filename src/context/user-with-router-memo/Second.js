@@ -3,18 +3,18 @@ import { useContext } from 'react'
 import UserContext from './UserContext'
 
 const Second = () => {
-    const [value, setValue] = useContext(UserContext)
+    const [number, setNumber] = useContext(UserContext)
     return (
         <div>
             <h2>
-                Second page
+                Second page: testing global state shared between routes
             </h2>
 
             <h3>
-                { value }
+                Number is: { number }
             </h3>
 
-            <button onClick={() => setValue("Value has changed")}>Change context value</button>
+            <button onClick={() => setNumber((number => number + 1))}>Change context value</button>
     
         </div>
     )

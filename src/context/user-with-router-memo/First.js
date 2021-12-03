@@ -7,7 +7,7 @@ export const First = () => {
     return (
         <div>
             <h2>
-                First page
+                First page: Testing global state shared among routes
             </h2>
 
             <h3>
