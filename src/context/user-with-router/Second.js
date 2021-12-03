@@ -3,7 +3,7 @@ import { useContext } from 'react'
 import UserContext from './UserContext'
 
 const Second = () => {
-    const message = useContext(UserContext)
+    const [value, setValue] = useContext(UserContext)
     return (
         <div>
             <h2>
@@ -11,8 +11,10 @@ const Second = () => {
             </h2>
 
             <h3>
-                { message }
+                { value }
             </h3>
+
+            <button onClick={() => setValue("Value has changed")}>Change context value</button>
     
         </div>
     )
