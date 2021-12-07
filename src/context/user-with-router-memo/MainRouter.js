@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react'
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'
+import { FilterList } from '../../debouncing/callback/FilterList'
 import { ShoppingList } from '../../reducer/complex/ShoppingList'
 import { LoginForm } from '../../reducer/login/LoginForm'
 import Counter from '../../reducer/simple/Counter'
@@ -63,6 +64,10 @@ const MainRouter = () => {
                         <li>
                             <Link to="/ref">Ref page</Link>
                         </li>
+
+                        <li>
+                            <Link to="/debounce">Debounce page</Link>
+                        </li>
                     </ul>
                 </nav>
              
@@ -73,6 +78,7 @@ const MainRouter = () => {
                     <Route path="/second/" element={<Second/>} />
                     <Route path="/reducer/" element={<LoginForm/>} />
                     <Route path="/ref/" element={<OldValue/>} />
+                    <Route path="/debounce/" element={<FilterList/>} />
                 </Routes>
             </UserContext.Provider>
             <br/>
