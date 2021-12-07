@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react'
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'
 import { ShoppingList } from '../../reducer/complex/ShoppingList'
+import { LoginForm } from '../../reducer/login/LoginForm'
 import Counter from '../../reducer/simple/Counter'
 import { First } from './First'
 import Second from './Second'
@@ -64,7 +65,7 @@ const MainRouter = () => {
                 <Routes>
                     <Route path="/" exact element={<First/>} />
                     <Route path="/second/" element={<Second/>} />
-                    <Route path="/reducer/" element={<ShoppingList/>} />
+                    <Route path="/reducer/" element={<LoginForm/>} />
                 </Routes>
             </UserContext.Provider>
             <br/>
