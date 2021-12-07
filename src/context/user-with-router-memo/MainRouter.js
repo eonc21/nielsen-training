@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'
 import { ShoppingList } from '../../reducer/complex/ShoppingList'
 import { LoginForm } from '../../reducer/login/LoginForm'
 import Counter from '../../reducer/simple/Counter'
+import { OldValue } from '../../ref/complex/OldValue'
+import { LogButtonClicks } from '../../ref/simple/LogButtonClicks'
 import { First } from './First'
 import Second from './Second'
 import UserContext from './UserContext'
@@ -45,17 +47,21 @@ const MainRouter = () => {
         <Router>
             <div>
                 <nav>
-                    <ul>
+                    <ul style={{display:'flex', flexDirection: 'column', height: '200px', border: "2px solid black", justifyContent:'space-around'}}>
                         <li>
-                            <Link to="/">First page</Link>
+                            <Link to="/">Context page 1</Link>
                         </li>
 
                         <li>
-                            <Link to="/second">Second page</Link>
+                            <Link to="/second">Context page 2</Link>
                         </li>
 
                         <li>
                             <Link to="/reducer">Reducer page</Link>
+                        </li>
+
+                        <li>
+                            <Link to="/ref">Ref page</Link>
                         </li>
                     </ul>
                 </nav>
@@ -66,6 +72,7 @@ const MainRouter = () => {
                     <Route path="/" exact element={<First/>} />
                     <Route path="/second/" element={<Second/>} />
                     <Route path="/reducer/" element={<LoginForm/>} />
+                    <Route path="/ref/" element={<OldValue/>} />
                 </Routes>
             </UserContext.Provider>
             <br/>
