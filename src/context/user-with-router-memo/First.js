@@ -6,12 +6,12 @@ export const First = () => {
     const message = useContext(UserContext)
     return (
         <div>
-            <h2>
-                First page: Testing global state shared among routes
-            </h2>
+            <h1>
+            Context page 2: Testing global state shared among routes
+            </h1>
 
             <h3>
-                { message }
+                Number is: { message }
             </h3>
     
         </div>

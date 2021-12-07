@@ -6,9 +6,9 @@ const Second = () => {
     const [number, setNumber] = useContext(UserContext)
     return (
         <div>
-            <h2>
-                Second page: testing global state shared between routes
-            </h2>
+            <h1>
+                Context page 1: testing global state shared between routes
+            </h1>
 
             <h3>
                 Number is: { number }
